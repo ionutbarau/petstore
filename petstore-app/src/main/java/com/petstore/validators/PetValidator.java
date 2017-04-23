@@ -1,9 +1,9 @@
 package com.petstore.validators;
 
 import com.petstore.entities.Pet;
-import com.petstore.enums.HttpStatusCode;
 import com.petstore.exceptions.PetStoreException;
 import com.petstore.exceptions.PetStoreExceptionMsg;
+import org.springframework.stereotype.Component;
 
 /**
  * Validator class for adding pets.
@@ -13,15 +13,26 @@ import com.petstore.exceptions.PetStoreExceptionMsg;
  * Date: 21/04/2017.
  * Time: 21:42
  */
+@Component
 public class PetValidator {
 
-    public static void validate(Pet pet) {
+    /**
+     * Validates input for creating a new pet.
+     *
+     * @param pet
+     * @throws PetStoreException
+     */
+    public void validate(Pet pet) throws PetStoreException {
         if (pet == null) {
-            throw new PetStoreException(HttpStatusCode.HTTP_400, PetStoreExceptionMsg.INVALID_INPUT);
+            throw new PetStoreException(PetStoreExceptionMsg.INVALID_INPUT);
         }
-        boolean isPetNameValid = pet.getName() == null || pet.getName().isEmpty();
-        if (!isPetNameValid) {
-            throw new PetStoreException(HttpStatusCode.HTTP_400, PetStoreExceptionMsg.INVALID_INPUT);
+        boolean isPetNameValid = pet.getName() != null && !pet.getName().isEmpty();
+        boolean isPetCategoryValid = pet.getCategory() != null;
+        boolean isPetStatusValid = pet.getStatus() != null;
+        boolean isPetTagsValid = pet.getTags() != null && !pet.getTags().isEmpty();
+        boolean isPetPhotosUrlValid = pet.getPhotoUrls() != null && !pet.getPhotoUrls().isEmpty();
+        if (!isPetNameValid || !isPetCategoryValid || !isPetPhotosUrlValid || !isPetTagsValid || !isPetStatusValid) {
+            throw new PetStoreException(PetStoreExceptionMsg.INVALID_INPUT);
         }
     }
 }

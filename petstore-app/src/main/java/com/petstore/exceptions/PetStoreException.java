@@ -1,9 +1,8 @@
 package com.petstore.exceptions;
 
-import com.petstore.enums.HttpStatusCode;
-
 /**
- * Class used for business related exceptions regarding the petstore.
+ * Class used for business related exceptions.
+ *
  * User: Ionut Barau (ionutbarau)
  * Project: petstore
  * Date: 21/04/2017.
@@ -11,14 +10,11 @@ import com.petstore.enums.HttpStatusCode;
  */
 public class PetStoreException extends RuntimeException {
 
-    private HttpStatusCode httpStatusCode;
 
     private String exceptionMsg;
 
-    public PetStoreException(HttpStatusCode httpStatusCode, String exceptionMsg) {
+    public PetStoreException(String exceptionMsg) {
         this.exceptionMsg = exceptionMsg;
-        this.httpStatusCode = httpStatusCode;
-        //HttpStatus.S
     }
 
     @Override
@@ -31,7 +27,4 @@ public class PetStoreException extends RuntimeException {
         return exceptionMsg;
     }
 
-    public HttpStatusCode getHttpStatusCode() {
-        return httpStatusCode;
-    }
 }

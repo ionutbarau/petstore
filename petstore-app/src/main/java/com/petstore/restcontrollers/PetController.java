@@ -2,15 +2,16 @@ package com.petstore.restcontrollers;
 
 import com.petstore.entities.Pet;
 import com.petstore.exceptions.PetStoreException;
+import com.petstore.exceptions.PetStoreExceptionInformation;
+import com.petstore.exceptions.PetStoreExceptionMsg;
 import com.petstore.services.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -27,20 +28,49 @@ public class PetController {
     private PetService petService;
 
 
-    @RequestMapping(value = "/all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Pet> list() {
         return petService.list();
     }
 
+
     @RequestMapping(value = "/{petId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Pet find(@PathVariable Integer petId, HttpServletResponse response) {
-        Pet pet = null;
-        try {
-            pet = petService.find(petId);
-        } catch (PetStoreException e) {
-            response.setStatus(e.getHttpStatusCode().getValue());
+    public Pet find(@PathVariable Integer petId) throws PetStoreException {
+        return petService.find(petId);
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Pet add(@RequestBody Pet pet) throws PetStoreException {
+        return petService.add(pet);
+    }
+
+    @RequestMapping(value = "/{petId}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public void delete(@PathVariable Integer petId) throws PetStoreException {
+        petService.delete(petId);
+    }
+
+    @ExceptionHandler(PetStoreException.class)
+    /**
+     * Exception handler for the pet rest api
+     */
+    public ResponseEntity<PetStoreExceptionInformation> handleExceptions(HttpServletRequest req, PetStoreException e) {
+        String message = e.getMessage();
+        PetStoreExceptionInformation info = new PetStoreExceptionInformation(message);
+        HttpStatus status;
+        switch (message) {
+            case PetStoreExceptionMsg.INVALID_ID:
+            case PetStoreExceptionMsg.INVALID_INPUT:
+            case PetStoreExceptionMsg.VALIDATION_EXCEPTION:
+                status = HttpStatus.BAD_REQUEST;
+                break;
+            case PetStoreExceptionMsg.PET_NOT_FOUND:
+                status = HttpStatus.NOT_FOUND;
+                break;
+            default:
+                status = HttpStatus.INTERNAL_SERVER_ERROR;
 
         }
-        return pet;
+        return new ResponseEntity<>(info, status);
     }
 }
