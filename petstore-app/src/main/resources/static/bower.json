@@ -17,6 +17,7 @@
     "angular-mocks": "~1.6.4",
     "angular-touch": "~1.6.4",
     "angular-animate": "~1.6.4",
+    "angular-bootstrap": "~2.4.0",
     "bootstrap": "~3.3.5"
   }
 }

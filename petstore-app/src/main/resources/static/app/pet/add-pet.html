@@ -1,0 +1,29 @@
+<form role="search">
+    <div class="input-group">
+        <span class="input-group-addon" id="name-label">Name</span>
+        <input type="text" id="name" ng-model="ctrl.newPet.name" class="form-control" placeholder="Gina the Lioness" aria-describedby="name-label">
+    </div>
+    <br/>
+    <div class="input-group">
+        <span class="input-group-addon" id="category-label">Category</span>
+        <input type="text" id="category" ng-model="ctrl.newPet.category.name" class="form-control" placeholder="LION" aria-describedby="category-label">
+    </div>
+    <br/>
+    <div class="input-group">
+        <span class="input-group-addon" id="status-label">Status</span>
+        <input type="text" id="status" ng-model="ctrl.newPet.status" class="form-control" placeholder="available" aria-describedby="status-label">
+    </div>
+    <br/>
+    <div class="input-group">
+        <span class="input-group-addon" id="tags-label">Tags</span>
+        <input type="text" id="tags" ng-model="ctrl.newPetTags" class="form-control" placeholder="cute, fluffy" aria-describedby="tags-label">
+    </div>
+    <br/>
+    <div class="input-group">
+        <span class="input-group-addon" id="photos-label">Photo URL's</span>
+        <input type="text" id="photos" ng-model="ctrl.newPetPhotoUrls" class="form-control" placeholder="url1, url2" aria-describedby="photos-label">
+    </div>
+    <div style="text-align: right">
+        <a href="#" class="btn btn-primary" role="button" ng-click="ctrl.addPet()">Add</a>
+    </div>
+</form>

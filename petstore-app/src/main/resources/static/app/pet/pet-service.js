@@ -6,21 +6,35 @@ angular.module('petstore.pets')
         var self = this;
         self.pets = [];
         self.errorMsg = '';
+
+
+        /**
+         * Add new pet.
+         * @param pet
+         */
         self.addPet = function (pet) {
             //create the header info
-            $http.post('/pet/', pet).then(function (response) {
-                console.log(response);
+            var auth = btoa("manager:password");
+            var headers = {"Authorization": "Basic " + auth};
+            $http.post('/pet/', pet,  {headers: headers}).then(function (response) {
+                self.searchPets('');
             }, function (error) {
-                console.log(error);
+                console.log('error' + error);
+                self.errorMsg = error.data.msg;
+                $rootScope.$broadcast("error");
             });
         };
 
 
+        /**
+         * Search for pets by id. If id is empty search for all available pets.
+         * @param id
+         */
         self.searchPets = function (id) {
             //create the header info
             var auth = btoa("manager:password");
             var headers = {"Authorization": "Basic " + auth};
-            return $http.get('/pet/' + id, {headers: headers}).then(function (response) {
+            $http.get('/pet/' + id, {headers: headers}).then(function (response) {
                 if (id === '') {
                     self.pets = response.data;
                 } else {
