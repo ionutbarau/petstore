@@ -15,5 +15,7 @@ public class PetStoreExceptionMsg {
     public static final String INVALID_INPUT = "Invalid input !";
     public static final String INVALID_ID = "Invalid ID supplied !";
     public static final String PET_NOT_FOUND = "Pet not found !";
+    public static final String INVALID_CREDENTIALS = "Invalid credentials !";
+
 
 }

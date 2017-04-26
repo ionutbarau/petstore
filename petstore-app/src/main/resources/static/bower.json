@@ -1,0 +1,22 @@
+{
+  "name": "petstore",
+  "description": "Petstore angular client",
+  "version": "1.0.0",
+  "license": "Apache",
+  "private": true,
+  "dependencies": {
+    "html5-boilerplate": "~5.2.0",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "angular": "~1.6.4",
+    "angular-route": "~1.6.4",
+    "angular-cookies": "~1.6.4",
+    "angular-resource": "~1.6.4",
+    "angular-sanitize": "~1.6.4",
+    "angular-loader": "~1.6.4",
+    "angular-mocks": "~1.6.4",
+    "angular-touch": "~1.6.4",
+    "angular-animate": "~1.6.4",
+    "bootstrap": "~3.3.5"
+  }
+}

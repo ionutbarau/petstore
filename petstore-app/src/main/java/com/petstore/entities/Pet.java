@@ -40,7 +40,7 @@ public class Pet implements Serializable {
     /** The list of photos for this pet instance. */
     private Set<String> photoUrls;
 
-    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToMany
     @JoinTable(
             name = "PETS_TAGS",
             joinColumns = @JoinColumn(name = "pet_id", referencedColumnName = "id"),

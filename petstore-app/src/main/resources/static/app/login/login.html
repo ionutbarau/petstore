@@ -1,0 +1,37 @@
+<div ng-controller="LoginController as ctrl">
+    <form>
+        <span ng-bind="ctrl.loginMsg" style="color:red"></span>
+        <table>
+            <thead>
+            <tr>
+                <th>Login</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="text" name="username" ng-model="ctrl.username"/></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" ng-model="ctrl.password"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <button ng-click="ctrl.login()">Login</button>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+    </form>
+    Credentials:<br/>
+    username : manager<br/>
+    password : password<br/>
+    *Has access to all the features (list all pets, find pet by id, add new pet and delete)
+    username : guest<br/>
+    password : password<br/>
+    *Has access to view features (list all pets, find pet by id)
+
+</div>
+
+

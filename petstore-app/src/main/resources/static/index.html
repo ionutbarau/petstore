@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="petstore" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="petstore" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="petstore" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="petstore" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Petstore</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/css/app.css">
+    <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<div id="container" class="container" ng-cloak>
+    <div id="header" class="panel-heading row">
+        <h3>Dog pawn <img src="app/images/dog_paw.png"/>
+            <small>petstore</small>
+        </h3>
+        <div style="text-align: right;" class="col-md-12">Welcome guest | <a href="#">logout</a></div>
+    </div>
+    <div class="row" ng-controller="PetController as ctrl">
+        <nav class="navbar navbar-default col-md-12">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Dog pawn</a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Add new pet</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search by id" ng-model="ctrl.petId">
+                        </div>
+                        <button type="submit" class="btn btn-default" ng-click="ctrl.searchPets()">Search</button>
+                    </form>
+                    <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+                </div>
+            </div>
+        </nav>
+        <div class="col-md-12 alert alert-danger" ng-if="ctrl.errorMsg">{{ctrl.errorMsg}}</div>
+    </div>
+    <div id="content" ng-view class="panel-body row">
+
+    </div>
+    <br/>
+    <div id="footer" class="panel-footer row">
+        <h5>@Copyright dog pawn petstore 2017</h5>
+    </div>
+</div>
+<script src="app/bower_components/angular/angular.min.js"></script>
+<script src="app/bower_components/angular-route/angular-route.min.js"></script>
+<script src="app/app.js"></script>
+<!--<script src="app/login/login-controller.js"></script>
+<script src="app/login/login-service.js"></script>-->
+<script src="app/pet/pet-controller.js"></script>
+<script src="app/pet/pet-service.js"></script>
+</body>
+</html>

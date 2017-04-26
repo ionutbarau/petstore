@@ -1,9 +1,11 @@
 package com.petstore.restcontrollers;
 
 import com.petstore.entities.Pet;
+import com.petstore.entities.User;
 import com.petstore.exceptions.PetStoreException;
 import com.petstore.exceptions.PetStoreExceptionInformation;
 import com.petstore.exceptions.PetStoreExceptionMsg;
+import com.petstore.repositories.UserRepository;
 import com.petstore.services.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,6 +29,14 @@ public class PetController {
     @Autowired
     private PetService petService;
 
+    @Autowired
+    private UserRepository userRepository;
+
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<User> listUsers() {
+        return userRepository.findAll();
+    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Pet> list() {
