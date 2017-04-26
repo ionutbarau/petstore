@@ -49,6 +49,23 @@ angular.module('petstore.pets')
             });
         };
 
+        /**
+         * Removes the the pet with the specified id.
+         * @param id
+         */
+        self.deletePet = function (id) {
+            //create the header info
+            var auth = btoa("manager:password");
+            var headers = {"Authorization": "Basic " + auth};
+            $http.delete('/pet/' + id, {headers: headers}).then(function (response) {
+                self.searchPets('');
+            }, function (error) {
+                console.log('error' + error);
+                self.errorMsg = error.data.msg;
+                $rootScope.$broadcast("error");
+            });
+        };
+
 
     }]);
 

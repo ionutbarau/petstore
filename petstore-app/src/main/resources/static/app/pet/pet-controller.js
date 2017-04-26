@@ -60,6 +60,15 @@ angular.module('petstore.pets', [])
         };
 
         /**
+         * Removes the the pet with the specified id.
+         * @param id
+         */
+        self.deletePet = function (id) {
+            petService.deletePet(id);
+
+        };
+
+        /**
          * Error handler
          */
         $scope.$on('error', function (event) {
