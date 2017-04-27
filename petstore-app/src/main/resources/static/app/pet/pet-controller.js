@@ -19,7 +19,7 @@ angular.module('petstore.pets', [])
         self.newPetTags = '';
         self.newPetPhotoUrls = '';
         self.petId = '';
-        self.errorMsg = '';
+        self.errorMsg;
 
         /**
          * Add new pet
@@ -81,11 +81,10 @@ angular.module('petstore.pets', [])
          */
         $scope.$on('updatePets', function (event) {
             self.pets = petService.pets;
-            self.errorMsg = '';
+            self.errorMsg = undefined;
             self.petId = '';
             $location.path('/view-pets');
         })
-
-        self.searchPets('');
+        
 
     }]);

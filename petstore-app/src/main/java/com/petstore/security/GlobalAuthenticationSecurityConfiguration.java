@@ -1,8 +1,8 @@
 package com.petstore.security;
 
 import com.petstore.entities.User;
-import com.petstore.exceptions.PetStoreException;
-import com.petstore.services.UserService;
+import com.petstore.exceptions.PetStoreExceptionMsg;
+import com.petstore.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 /**
  * User: Ionut Barau (ionutbarau)
@@ -24,7 +25,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 class GlobalAuthenticationSecurityConfiguration extends GlobalAuthenticationConfigurerAdapter {
 
     @Autowired
-    private UserService userService;
+    private UserRepository userRepository;
 
     @Override
     public void init(AuthenticationManagerBuilder auth) throws Exception {
@@ -36,8 +37,13 @@ class GlobalAuthenticationSecurityConfiguration extends GlobalAuthenticationConf
         return new UserDetailsService() {
 
             @Override
-            public UserDetails loadUserByUsername(String username) throws PetStoreException {
-                User user = userService.findByUsername(username);
+            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+                User user = userRepository.findByUsername(username);
+
+                if(user == null) {
+                    throw new UsernameNotFoundException(PetStoreExceptionMsg.INVALID_CREDENTIALS);
+                }
+
                 return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
                         true, true, true, true, AuthorityUtils.createAuthorityList(user.getRole()));
             }

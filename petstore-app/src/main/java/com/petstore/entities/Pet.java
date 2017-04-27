@@ -37,6 +37,7 @@ public class Pet implements Serializable {
 
     @ElementCollection
     @CollectionTable(name = "photo_urls")
+    @Column(length = 10000)
     /** The list of photos for this pet instance. */
     private Set<String> photoUrls;
 

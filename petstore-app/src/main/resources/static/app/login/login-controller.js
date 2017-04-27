@@ -1,16 +1,19 @@
 /**
  * Created by ionutbarau on 24/04/2017.
  */
-angular.module('petstore.login', ['ngRoute'])
-    .controller('LoginController', ['LoginService', '$location', '$log', function (loginService, $location, $log) {
+angular.module('petstore.login', [])
+    .controller('LoginController', ['LoginService', '$location', '$log', '$scope', function (loginService, $location, $log, $scope) {
         var self = this;
         self.username = '';
         self.password = '';
-        self.loginMsg = '';
+        self.errorMsg;
+        self.isAutheticated=false;
+        self.loginName = '';
+        self.isManager = false;
         self.login = function () {
             loginService.login(self.username, self.password, function () {
-                if ($rootScope.authenticated) {
-                    $location.path("/pet");
+                if (loginService.isAutheticated) {
+                    $location.path("/view-pets");
                     self.error = false;
                 } else {
                     $location.path("/login");
@@ -18,4 +21,45 @@ angular.module('petstore.login', ['ngRoute'])
                 }
             });
         };
+
+        self.logout = function () {
+            loginService.logout();
+        };
+
+        /**
+         * Login Error handler
+         */
+        $scope.$on('login-error', function (event) {
+            self.errorMsg = loginService.errorMsg;
+            self.isAutheticated = loginService.isAutheticated;
+        })
+
+        /**
+         * Login ok handler
+         */
+        $scope.$on('login-ok', function (event) {
+            self.errorMsg = undefined;
+            self.isAutheticated = loginService.isAutheticated;
+            self.loginName = loginService.username;
+            self.isManager = loginService.isManager;
+            $location.path('/view-pets');
+        })
+
+        /**
+         * Logout Error handler
+         */
+        $scope.$on('logout-error', function (event) {
+            self.errorMsg = loginService.errorMsg;
+        })
+
+        /**
+         * Logout ok handler
+         */
+        $scope.$on('logout-ok', function (event) {
+            self.errorMsg = undefined;
+            self.isAutheticated = loginService.isAutheticated;
+            self.loginName = loginService.username;
+            self.isManager = loginService.isManager;
+            $location.path('/login');
+        })
     }]);

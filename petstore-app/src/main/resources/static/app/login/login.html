@@ -1,36 +1,38 @@
-<div ng-controller="LoginController as ctrl">
+<div class="col-md-4 col-md-push-4">
+    <div ng-if="loginCtrl.errorMsg">
+        {{loginCtrl.errorMsg}}
+    </div>
     <form>
-        <span ng-bind="ctrl.loginMsg" style="color:red"></span>
-        <table>
-            <thead>
-            <tr>
-                <th>Login</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="text" name="username" ng-model="ctrl.username"/></td>
-            </tr>
-            <tr>
-                <td><input type="password" name="password" ng-model="ctrl.password"/></td>
-            </tr>
-            <tr>
-                <td>
-                    <button ng-click="ctrl.login()">Login</button>
-                </td>
-            </tr>
-            </tbody>
-            <tfoot>
-            </tfoot>
-        </table>
+        <div class="input-group">
+            <span class="input-group-addon" id="username-label">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                Username
+            </span>
+            <input type="text"  id="name" name="username" ng-model="loginCtrl.username"class="form-control"
+                   placeholder="manager" aria-describedby="username-label">
+        </div>
+        <br/>
+        <div class="input-group">
+            <span class="input-group-addon" id="password-label">
+                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                Password
+            </span>
+            <input id="category" type="password" name="password" ng-model="loginCtrl.password" class="form-control" placeholder="password" aria-describedby="password-label">
+        </div>
+        <br/>
+        <div style="text-align: right">
+            <a ng-href="#!/login" class="btn btn-primary" role="button" ng-click="loginCtrl.login()">Login</a>
+        </div>
     </form>
-    Credentials:<br/>
-    username : manager<br/>
-    password : password<br/>
-    *Has access to all the features (list all pets, find pet by id, add new pet and delete)
-    username : guest<br/>
-    password : password<br/>
-    *Has access to view features (list all pets, find pet by id)
+    <p style="text-align: center">
+        <h3>Credentials</h3>
+        <b>username</b> : <i>manager</i><br/>
+        <b>password</b> : <i>password</i><br/>
+        <i style="color:red">*Has access to all the features (list all pets, find pet by id, add new pet and delete)</i><br/>
+        <b>username</b> : <i>guest</i><br/>
+        <b>password</b> : <i>password</i><br/>
+        <i style="color:red">*Has access to view features (list all pets, find pet by id)</i>
+    </p>
 
 </div>
 

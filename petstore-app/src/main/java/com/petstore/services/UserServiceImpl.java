@@ -21,7 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Time: 21:45
  */
 @Service
-@Transactional(propagation = Propagation.REQUIRED)
+@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
 public class UserServiceImpl implements UserService {
 
     private final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);

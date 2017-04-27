@@ -29,15 +29,6 @@ public class PetController {
     @Autowired
     private PetService petService;
 
-    @Autowired
-    private UserRepository userRepository;
-
-
-    @RequestMapping(value = "/users", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<User> listUsers() {
-        return userRepository.findAll();
-    }
-
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Pet> list() {
         return petService.list();

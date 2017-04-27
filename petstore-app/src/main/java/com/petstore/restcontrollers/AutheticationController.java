@@ -18,4 +18,5 @@ public class AutheticationController {
     public Principal user(Principal user) {
         return user;
     }
+
 }

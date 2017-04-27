@@ -15,7 +15,7 @@
                             <span ng-repeat="tag in pet.tags" class="label label-success" style="margin-right: 5px;">{{tag.name}}</span>
                         </p>
                         <p><a href="#" class="btn btn-primary" role="button">Buy</a></p>
-                        <p><a href="#" class="btn btn-primary" role="button" ng-click="ctrl.deletePet(pet.id)">Delete</a></p>
+                        <p><a href="#" class="btn btn-primary" role="button" ng-if="loginCtrl.isManager" ng-click="ctrl.deletePet(pet.id)">Delete</a></p>
                     </div>
                 </div>
             </div>

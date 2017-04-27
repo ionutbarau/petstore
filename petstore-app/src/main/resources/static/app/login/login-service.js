@@ -1,25 +1,44 @@
 /**
  * Created by ionutbarau on 24/04/2017.
  */
-angular.module('petstore.login', [])
-    .service('LoginService', ['$rootScope', '$http', '$log', function ($rootScope, $http, $log) {
+angular.module('petstore.login')
+    .service('LoginService', ['$rootScope', '$http', '$log','PetService', function ($rootScope, $http, $log, petService) {
         var self = this;
+        self.errorMsg="";
+        self.isAutheticated=false;
+        self.username = '';
+        self.isManager = false;
         self.login = function (username, password) {
             //create the header info
-            var headers = credentials ? {
-                authorization: "Basic "
-                + btoa(credentials.username + ":" + credentials.password)
-            } : {};
+            var auth = btoa(username +':'+password);
+            var headers = {"Authorization": "Basic " + auth};
 
-            $http.get('user', {headers: headers}).then(function (response) {
-                if (response.data.name) {
-                    $rootScope.authenticated = true;
-                } else {
-                    $rootScope.authenticated = false;
-                }
-            }, function () {
-                $rootScope.authenticated = false;
+            $http.get('/user/', {headers: headers}).then(function (response) {
+                console.log(response);
+                self.isAutheticated = true;
+                self.errorMsg = undefined;
+                self.username = response.data.principal.username;
+                self.isManager = response.data.authorities[0].authority ==='ROLE_MANAGER';
+                $rootScope.$broadcast("login-ok");
+                petService.searchPets('');
+            }, function (error) {
+                self.isAutheticated = false;
+                self.errorMsg = error.data.msg;
+                console.log(error);
+                $rootScope.$broadcast("login-error");
             });
         }
 
+        self.logout = function(){
+            $http.get('/logout').then(function (response) {
+                console.log(response);
+                self.isAutheticated = false;
+                self.errorMsg = undefined;
+                self.username = '';
+                self.isManager = false;
+                $rootScope.$broadcast("logout-ok");
+            }, function (error) {
+                $rootScope.$broadcast("logout-error");
+            });
+        }
     }]);

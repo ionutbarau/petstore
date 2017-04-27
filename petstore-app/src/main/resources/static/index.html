@@ -19,29 +19,33 @@
     <link rel="stylesheet" href="app/css/app.css">
     <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body ng-controller="PetController as ctrl">
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-<div id="container" class="container" ng-cloak ng-controller="PetController as ctrl">
+<div id="container" class="container" ng-cloak ng-controller="LoginController as loginCtrl">
     <div id="header" class="panel-heading row">
         <h3>Dog pawn <img src="app/images/dog_paw.png"/>
             <small>petstore</small>
         </h3>
-        <div style="text-align: right;" class="col-md-12">Welcome guest | <a href="#">logout</a></div>
+        <div style="text-align: right;" class="col-md-12">
+            <span ng-if="loginCtrl.isAutheticated">Welcome {{loginCtrl.loginName}}</span>
+            <a ng-if="loginCtrl.isAutheticated" ng-href="#" ng-click="loginCtrl.logout()">| Logout</a>
+        </div>
     </div>
     <div class="row">
         <nav class="navbar navbar-default col-md-12">
             <div class="container">
                 <div class="navbar-header row">
-                    <a class="navbar-brand" href="#!/">Dog pawn</a>
-                    <ul class="nav navbar-nav">
+                    <a class="navbar-brand" ng-href="#!/" ng-click="ctrl.searchPets()" ng-if="loginCtrl.isAutheticated">Dog pawn</a>
+                    <a class="navbar-brand" ng-href="#!/" ng-if="!loginCtrl.isAutheticated">Dog pawn</a>
+                    <ul class="nav navbar-nav" ng-if="loginCtrl.isAutheticated">
                         <li><a ng-href="#!/view-pets" ng-click="ctrl.searchPets()">View available pets</a></li>
-                        <li><a href="#!/add-pet">Add new pet</a></li>
+                        <li><a href="#!/add-pet" ng-if="loginCtrl.isManager">Add new pet</a></li>
                     </ul>
-                    <form class="navbar-form navbar-right col-md-3 col-md-push-5" role="search">
+                    <form class="navbar-form navbar-right" role="search" ng-if="loginCtrl.isAutheticated">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Search by id" ng-model="ctrl.petId">
                         </div>
@@ -66,8 +70,8 @@
 <script src="app/bower_components/angular-touch/angular-touch.min.js"></script>
 <script src="app/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="app/app.js"></script>
-<!--<script src="app/login/login-controller.js"></script>
-<script src="app/login/login-service.js"></script>-->
+<script src="app/login/login-controller.js"></script>
+<script src="app/login/login-service.js"></script>
 <script src="app/pet/pet-controller.js"></script>
 <script src="app/pet/pet-service.js"></script>
 </body>

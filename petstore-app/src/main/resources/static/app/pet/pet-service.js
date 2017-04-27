@@ -14,9 +14,9 @@ angular.module('petstore.pets')
          */
         self.addPet = function (pet) {
             //create the header info
-            var auth = btoa("manager:password");
-            var headers = {"Authorization": "Basic " + auth};
-            $http.post('/pet/', pet,  {headers: headers}).then(function (response) {
+           /* var auth = btoa("manager:password");
+            var headers = {"Authorization": "Basic " + auth};*/
+            $http.post('/pet/', pet).then(function (response) {
                 self.searchPets('');
             }, function (error) {
                 console.log('error' + error);
@@ -32,9 +32,9 @@ angular.module('petstore.pets')
          */
         self.searchPets = function (id) {
             //create the header info
-            var auth = btoa("manager:password");
-            var headers = {"Authorization": "Basic " + auth};
-            $http.get('/pet/' + id, {headers: headers}).then(function (response) {
+            /*var auth = btoa("manager:password");
+            var headers = {"Authorization": "Basic " + auth};*/
+            $http.get('/pet/' + id).then(function (response) {
                 if (id === '') {
                     self.pets = response.data;
                 } else {
@@ -55,9 +55,9 @@ angular.module('petstore.pets')
          */
         self.deletePet = function (id) {
             //create the header info
-            var auth = btoa("manager:password");
-            var headers = {"Authorization": "Basic " + auth};
-            $http.delete('/pet/' + id, {headers: headers}).then(function (response) {
+            /*var auth = btoa("manager:password");
+            var headers = {"Authorization": "Basic " + auth};*/
+            $http.delete('/pet/' + id).then(function (response) {
                 self.searchPets('');
             }, function (error) {
                 console.log('error' + error);
