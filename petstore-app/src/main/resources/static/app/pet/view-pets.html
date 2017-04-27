@@ -1,9 +1,10 @@
 <div class="row">
     <div ng-repeat="pet in ctrl.pets" class="col-md-12">
         <div class="row">
-            <div class="col-md-8 col-md-push-2">
+            <div class="col-md-6 col-md-push-3">
                 <div class="thumbnail">
                     <img ng-src="{{pet.photoUrls[0]}}" alt="pet.name">
+                    <img ng-src="{{pet.photoUrls[1]}}" alt="pet.name">
                     <div class="caption">
                         <h3><i>{{pet.name}}</i></h3>
                         <p>ID : <b>{{pet.id}}</b></p>

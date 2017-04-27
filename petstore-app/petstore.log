@@ -1,0 +1,178 @@
+2017-04-27 01:33:36.820  INFO 28116 --- [main] com.petstore.PetstoreApplicationTests    : No active profile set, falling back to default profiles: default
+2017-04-27 01:33:36.825  INFO 28116 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:33:36 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:33:37.650  INFO 28116 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cec24c3e-cbf7-3187-b008-1661600e2fbb
+2017-04-27 01:33:37.830  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd0feffa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.873  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$65bdb834] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.883  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.886  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3659d7b1' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.895  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$8a925ae6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.914  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:37.924  INFO 28116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e929f2f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:33:38.652  INFO 28116 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:33:38.677  INFO 28116 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-04-27 01:33:38.761  INFO 28116 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-04-27 01:33:38.763  INFO 28116 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-04-27 01:33:38.765  INFO 28116 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-04-27 01:33:38.810  INFO 28116 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-04-27 01:33:38.926  INFO 28116 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-04-27 01:33:39.370  WARN 28116 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:33:39.374  WARN 28116 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:33:39.374  WARN 28116 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:33:39.375  WARN 28116 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:33:39.730  INFO 28116 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-04-27 01:33:39.766  INFO 28116 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-04-27 01:33:39.820  INFO 28116 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:33:41.055  INFO 28116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a69f9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@33187485, org.springframework.security.web.header.HeaderWriterFilter@3eb9c575, org.springframework.security.web.authentication.logout.LogoutFilter@682266d8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@606b53a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d2e6f62, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@525b8922, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a8dcfbb, org.springframework.security.web.session.SessionManagementFilter@32e830a0, org.springframework.security.web.access.ExceptionTranslationFilter@2a4e939a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@674aa626]
+2017-04-27 01:33:41.399  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:33:36 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:33:41.477  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user]}" onto public java.security.Principal com.petstore.restcontrollers.AutheticationController.user(java.security.Principal)
+2017-04-27 01:33:41.479  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.petstore.entities.Pet com.petstore.restcontrollers.PetController.add(com.petstore.entities.Pet) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:33:41.480  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/{petId}],methods=[GET],produces=[application/json]}" onto public com.petstore.entities.Pet com.petstore.restcontrollers.PetController.find(java.lang.Integer) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:33:41.480  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/{petId}],methods=[DELETE],produces=[application/json]}" onto public void com.petstore.restcontrollers.PetController.delete(java.lang.Integer) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:33:41.480  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.petstore.entities.Pet> com.petstore.restcontrollers.PetController.list()
+2017-04-27 01:33:41.481  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/users],methods=[GET],produces=[application/json]}" onto public java.util.List<com.petstore.entities.User> com.petstore.restcontrollers.PetController.listUsers()
+2017-04-27 01:33:41.481  INFO 28116 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<com.petstore.exceptions.PetStoreExceptionInformation> com.petstore.restcontrollers.PetstoreErrorController.error()
+2017-04-27 01:33:41.519  INFO 28116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:33:41.520  INFO 28116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:33:41.570  INFO 28116 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:33:41.595  INFO 28116 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2017-04-27 01:33:42.035  INFO 28116 --- [main] com.petstore.PetstoreApplicationTests    : Started PetstoreApplicationTests in 16.14 seconds (JVM running for 16.814)
+2017-04-27 01:33:42.096  INFO 28116 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:33:36 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:33:42.102  INFO 28116 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:33:42.103  INFO 28116 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-04-27 01:33:42.110 ERROR 28116 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1484) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1459) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:458) ~[h2-1.4.194.jar:1.4.194]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.14.jar:na]
+	at com.sun.proxy.$Proxy78.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:459) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:630) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at com.sun.proxy.$Proxy93.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:550) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+
+2017-04-27 01:33:42.111  INFO 28116 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-04-27 01:59:30.090  INFO 28433 --- [main] com.petstore.PetstoreApplicationTests    : No active profile set, falling back to default profiles: default
+2017-04-27 01:59:30.096  INFO 28433 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:59:30 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:59:30.877  INFO 28433 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cec24c3e-cbf7-3187-b008-1661600e2fbb
+2017-04-27 01:59:31.050  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd0feffa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.092  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$65bdb834] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.104  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.109  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3bdb2c78' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.120  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$8a925ae6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.136  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.148  INFO 28433 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e929f2f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-27 01:59:31.654  INFO 28433 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:59:31.671  INFO 28433 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-04-27 01:59:31.757  INFO 28433 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-04-27 01:59:31.758  INFO 28433 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-04-27 01:59:31.759  INFO 28433 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-04-27 01:59:31.802  INFO 28433 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-04-27 01:59:31.913  INFO 28433 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-04-27 01:59:32.241  WARN 28433 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:59:32.244  WARN 28433 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:59:32.244  WARN 28433 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:59:32.244  WARN 28433 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2017-04-27 01:59:32.481  INFO 28433 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-04-27 01:59:32.508  INFO 28433 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2017-04-27 01:59:32.548  INFO 28433 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:59:33.379  INFO 28433 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a69f9d, org.springframework.security.web.context.SecurityContextPersistenceFilter@33187485, org.springframework.security.web.header.HeaderWriterFilter@3eb9c575, org.springframework.security.web.authentication.logout.LogoutFilter@682266d8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@606b53a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d2e6f62, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@525b8922, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a8dcfbb, org.springframework.security.web.session.SessionManagementFilter@32e830a0, org.springframework.security.web.access.ExceptionTranslationFilter@2a4e939a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@674aa626]
+2017-04-27 01:59:33.690  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:59:30 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:59:33.767  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user]}" onto public java.security.Principal com.petstore.restcontrollers.AutheticationController.user(java.security.Principal)
+2017-04-27 01:59:33.769  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.petstore.entities.Pet com.petstore.restcontrollers.PetController.add(com.petstore.entities.Pet) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:59:33.769  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/{petId}],methods=[GET],produces=[application/json]}" onto public com.petstore.entities.Pet com.petstore.restcontrollers.PetController.find(java.lang.Integer) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:59:33.769  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/{petId}],methods=[DELETE],produces=[application/json]}" onto public void com.petstore.restcontrollers.PetController.delete(java.lang.Integer) throws com.petstore.exceptions.PetStoreException
+2017-04-27 01:59:33.769  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.petstore.entities.Pet> com.petstore.restcontrollers.PetController.list()
+2017-04-27 01:59:33.770  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pet/users],methods=[GET],produces=[application/json]}" onto public java.util.List<com.petstore.entities.User> com.petstore.restcontrollers.PetController.listUsers()
+2017-04-27 01:59:33.770  INFO 28433 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<com.petstore.exceptions.PetStoreExceptionInformation> com.petstore.restcontrollers.PetstoreErrorController.error()
+2017-04-27 01:59:33.808  INFO 28433 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:59:33.809  INFO 28433 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:59:33.850  INFO 28433 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-27 01:59:33.882  INFO 28433 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2017-04-27 01:59:34.302  INFO 28433 --- [main] com.petstore.PetstoreApplicationTests    : Started PetstoreApplicationTests in 15.187 seconds (JVM running for 15.87)
+2017-04-27 01:59:34.361  INFO 28433 --- [Thread-6] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1de5f0ef: startup date [Thu Apr 27 01:59:30 CEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@74e28667
+2017-04-27 01:59:34.366  INFO 28433 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-04-27 01:59:34.367  INFO 28433 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2017-04-27 01:59:34.373 ERROR 28433 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000231: Schema export unsuccessful
+
+org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-194]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:179) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:155) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.message.DbException.get(DbException.java:144) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1484) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1459) ~[h2-1.4.194.jar:1.4.194]
+	at org.h2.jdbc.JdbcConnection.getAutoCommit(JdbcConnection.java:458) ~[h2-1.4.194.jar:1.4.194]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:79) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:108) ~[tomcat-jdbc-8.5.14.jar:na]
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:81) ~[tomcat-jdbc-8.5.14.jar:na]
+	at com.sun.proxy.$Proxy78.getAutoCommit(Unknown Source) ~[na:na]
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:34) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:35) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:425) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:375) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:371) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1081) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:347) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:459) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:630) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at com.sun.proxy.$Proxy93.close(Unknown Source) [na:na]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:550) [spring-orm-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:961) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:968) [spring-beans-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1033) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1009) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$2.run(AbstractApplicationContext.java:928) [spring-context-4.3.8.RELEASE.jar:4.3.8.RELEASE]
+
+2017-04-27 01:59:34.374  INFO 28433 --- [Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
