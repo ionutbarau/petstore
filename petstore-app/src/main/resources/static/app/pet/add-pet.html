@@ -1,4 +1,4 @@
-<form role="search">
+<form role="search" ng-submit="ctrl.addPet()">
     <div class="input-group">
         <span class="input-group-addon" id="name-label">Name</span>
         <input type="text" id="name" ng-model="ctrl.newPet.name" class="form-control" placeholder="Gina the Lioness" aria-describedby="name-label">
@@ -25,6 +25,6 @@
     </div>
     <br/><br/>
     <div style="text-align: right">
-        <a ng-href="#!/add-pet" class="btn btn-primary" role="button" ng-click="ctrl.addPet()">Add</a>
+        <button class="btn btn-primary" role="button" type="submit">Add</button>
     </div>
 </form>

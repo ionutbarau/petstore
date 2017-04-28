@@ -7,9 +7,9 @@ angular.module('petstore.login', [])
         self.username = '';
         self.password = '';
         self.errorMsg;
-        self.isAutheticated=false;
-        self.loginName = '';
-        self.isManager = false;
+        self.isAutheticated=loginService.isAutheticated;
+        self.loginName = loginService.username;
+        self.isManager = loginService.isManager;
         self.login = function () {
             loginService.login(self.username, self.password, function () {
                 if (loginService.isAutheticated) {

@@ -21,7 +21,10 @@ angular.module('petstore', [
 
     });
     $routeProvider.otherwise({redirectTo: '/login'});
+}]).config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
 }]).run(function ($rootScope, $location, LoginService) {
+    console.log(LoginService);
     console.log("route change start");
     $rootScope.$on("$routeChangeStart", function(event){
         if (!LoginService.isAutheticated){

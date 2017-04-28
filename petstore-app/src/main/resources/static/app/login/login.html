@@ -1,8 +1,8 @@
 <div class="col-md-4 col-md-push-4">
-    <div ng-if="loginCtrl.errorMsg">
+    <div ng-if="loginCtrl.errorMsg" class="alert alert-warning">
         {{loginCtrl.errorMsg}}
     </div>
-    <form>
+    <form role="login" ng-submit="loginCtrl.login()">
         <div class="input-group">
             <span class="input-group-addon" id="username-label">
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -21,7 +21,7 @@
         </div>
         <br/>
         <div style="text-align: right">
-            <a ng-href="#!/login" class="btn btn-primary" role="button" ng-click="loginCtrl.login()">Login</a>
+            <button class="btn btn-primary" role="button" type="submit">Login</button>
         </div>
     </form>
     <p style="text-align: center">
