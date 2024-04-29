@@ -1,2 +1,2 @@
 # petstore
-Example petstore application using microservices (spring-boot, angularjs, bootstrap, rest)
+Example petstore application using REST services (spring-boot, angularjs, bootstrap, rest)
